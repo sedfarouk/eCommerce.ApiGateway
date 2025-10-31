@@ -7,10 +7,10 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["eCommerce.ApiGateway.csproj", "./"]
-RUN dotnet restore "eCommerce.ApiGateway.csproj"
+COPY ["eCommerce.ApiGateway/eCommerce.ApiGateway.csproj", "eCommerce.ApiGateway/"]
+RUN dotnet restore "eCommerce.ApiGateway/eCommerce.ApiGateway.csproj"
 COPY . .
-WORKDIR "/src/"
+WORKDIR "/src/eCommerce.ApiGateway"
 RUN dotnet build "./eCommerce.ApiGateway.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
