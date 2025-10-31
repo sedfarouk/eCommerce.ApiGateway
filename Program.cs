@@ -1,6 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+builder.Configuration.AddJsonFile("ocelot.json", optional: false);
+
+var app = builder.Build();
 
 app.Run();
