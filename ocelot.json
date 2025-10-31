@@ -61,18 +61,6 @@
       "UpstreamScheme": "http"
     },
     {
-      "UpstreamPathTemplate": "/gateway/Orders/search/userid/{userid}",
-      "DownstreamPathTemplate": "/api/Orders/search/userid/{userid}",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "ordersmicroservice.api",
-          "Port": 8080
-        }
-      ],
-      "UpstreamHttpMethod": ["Get"],
-      "UpstreamScheme": "http"
-    },
-    {
       "UpstreamPathTemplate": "/gateway/Orders/{orderid}",
       "DownstreamPathTemplate": "/api/Orders/{orderid}",
       "DownstreamHostAndPorts": [
