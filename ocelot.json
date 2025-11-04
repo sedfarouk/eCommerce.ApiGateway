@@ -97,7 +97,11 @@
         "Period": "60s",
         "HttpStatusCode": 429,
         "EnableRateLimiting": true,
-        "PeriodTimespan": 30
+        "PeriodTimespan": 30,
+        "ClientWhitelist": [
+          "Client1", "Client2"
+        ],
+        "ClientIdHeader": "Client-Id"
       }
     },
     {
